@@ -1,8 +1,8 @@
 clear;clc;close all
 
-% CODE APPLIES ENSEMLBLE METHOD TO ENVIORMENTAL/BIOMETRIC DATA FROM
-% MINOLTA AND TOBII PRO GLASSES 2 - LEFT PUPIL DIAMETER MODELED BY
-% LIGHT INTENSITY, SPECTRUM, AND HEAD ROTATION
+% CODE APPLIES AN ENSEMBLE METHOD TO ENVIORMENTAL/BIOMETRIC DATA FROM
+% MINOLTA AND TOBII PRO GLASSES 2 - ILLUMINANCE MODELED BY
+% PUPIL DIAMETER AND HEAD ROTATION
 
 % CODE AUTHORED BY: SHAWHIN TALEBI
 % THE UNIVERSITY OF TEXAS AT DALLAS
@@ -12,31 +12,34 @@ clear;clc;close all
 % where the pupil diameters were measured as zero nor the columns
 % corresponding to the error variables
 
-load('Clean_All_MT_Table.mat');
+% change directory to proper parent
+str = pwd;
+if strcmp(str(end-7:end), 'Analysis')
+    idcs = strfind(pwd,filesep);
+    eval(strcat("cd ", (str(1:idcs(end-1)))))
+end
+
+% load all data in table form
+load('objects/MinoltaTobii/Clean_APD_MT_Table.mat');
 
 % define vector of indicies for variables of interest
-invarVec = [2 31:451 482:487];
-outvarVec = 463;
+invarVec = [463 465 482:487];
+outvarVec = 2;
 
 % define table with variables of interest
 Data = [Clean_All_MT_Table(:,invarVec) Clean_All_MT_Table(:,outvarVec)];
 
 % define variable labels
-VariableLabels = {'Illuminance'};   % define first label
-
-% add spectrum labels
-spectrumVec = 360:780; 
-VariableLabels = [VariableLabels strcat(string(spectrumVec), ' nm')];
-
-% add biometric labels
-VariableLabels = [VariableLabels ...
+VariableLabels = [...
+    {'Left Pupil Diameter'}...
+    {'Right Pupil Diameter'}...
     {'Gyroscope X'}...
     {'Gyroscope Y'}...
     {'Gyroscope Z'}...
     {'Accelerometer X'}...
     {'Accelerometer Y'}...
     {'Accelerometer Z'}...
-    {'Left Pupil Diameter'}];
+    {'Illuminance'}];
 
 % partition the data into a training and testing set
 c = cvpartition(height(Data),'HoldOut',0.1);
@@ -48,16 +51,16 @@ train_rows = temp.*(c.training);
 train_rows = train_rows(train_rows~=0);
 
 Train = Data(train_rows,:);
-InTrain = Train(:,1:428);
-OutTrain = Train(:,429);
+InTrain = Train(:,1:8);
+OutTrain = Train(:,9);
 
 % set up testing data set
 test_rows = temp.*(c.test);
 test_rows = test_rows(test_rows~=0);
 
 Test = Data(test_rows,:);
-InTest = Test(:,1:428);
-OutTest = Test(:,429);
+InTest = Test(:,1:8);
+OutTest = Test(:,9);
 
 % set up parallel processing
 mypool = parpool(16);
@@ -82,5 +85,5 @@ whos Mdl
 Mdl=compact(Mdl);
 whos Mdl
 
-% save Workspace
-save('Workspaces/LPD_ensemble_MT.mat');
+% rename and save model
+save('Workspaces/ILM_ensemble_MT.mat');

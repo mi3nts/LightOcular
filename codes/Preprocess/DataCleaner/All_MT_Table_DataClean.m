@@ -14,9 +14,12 @@ if strcmp(str(end-10:end), 'DataCleaner')
     eval(strcat("cd ", (str(1:idcs(end-2)))))
 end
 
-% load all data in table form
+% load all data in timetable form
 load(['objects/' ...
-'MinoltaTobii/MT_All_Table.mat']);
+'MinoltaTobii/MT_All_Timetable.mat']);
+
+% convert timetable to table
+MT_All_Table = timetable2table(MT_All_Timetable);
 
 % remove datetime variable
 Data = MT_All_Table;

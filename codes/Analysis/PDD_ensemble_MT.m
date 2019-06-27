@@ -13,7 +13,15 @@ clear;clc;close all
 % corresponding to the error variables, it also includes the variable
 % PupilDiameterDifference, and does not include the datetime variable
 
-load('Clean_PDD_MT_Table.mat');
+% change directory to proper parent
+str = pwd;
+if strcmp(str(end-7:end), 'Analysis')
+    idcs = strfind(pwd,filesep);
+    eval(strcat("cd ", (str(1:idcs(end-1)))))
+end
+
+% load all data in table form
+load('objects/MinoltaTobii/Clean_APD_MT_Table.mat');
 
 % define vector of indicies for variables of interest
 invarVec = [1 30:450 479:484];
