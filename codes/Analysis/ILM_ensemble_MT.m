@@ -86,4 +86,4 @@ Mdl=compact(Mdl);
 whos Mdl
 
 % rename and save model
-save('Workspaces/ILM_ensemble_MT.mat');
+save('objects/Workspaces/ILM_ensemble_MT.mat');
