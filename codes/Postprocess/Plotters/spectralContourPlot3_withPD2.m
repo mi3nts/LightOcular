@@ -16,7 +16,7 @@ if strcmp(str(end-7:end), 'Plotters')
     eval(strcat("cd ", (str(1:idcs(end-2)))))
 end
 
-% load desired worspace
+% load desired workspace
 load('objects/Tables/All_MT_Table.mat');
 
 % add spectrum labels
