@@ -1,7 +1,8 @@
 clear;clc;close all
 
 % CODE PLOTS IMPORTANCE RANKING, ERROR HISTOGRAM, AND SCATTER FOR COMPACT
-% ENSEMBLE TREE MODEL
+% ENSEMBLE MODEL. COPY AND PASTE THE WORKSPACE WITH THE DESIRED MODEL IN
+% LINE 19.
 
 % CODE AUTHORED BY: SHAWHIN TALEBI
 % THE UNIVERSITY OF TEXAS AT DALLAS
@@ -57,7 +58,7 @@ ax.FontSize = 16;
 hold off
 
 % save histogram
-print(strcat("codes/Postprocess/Plotters/Plots/ErrorHistogram/",VariableLabels(end),"_Ensemble_ErrHist"),'-dpng')
+print(strcat("codes/Postprocess/Plotters/Plots/errorHistogram/",VariableLabels(end),"_Ensemble_ErrHist"),'-dpng')
 
 % compute importance rankings 
 imp=predictorImportance(Mdl);
@@ -100,7 +101,7 @@ ylim([.25 n_top_bars+.75])
   end
   hold off
 % save graph as png
-print(strcat("codes/Postprocess/Plotters/Plots/ImportanceRanking/", VariableLabels(end),"_Ensemble_ImpRank_T20"),'-dpng')
+print(strcat("codes/Postprocess/Plotters/Plots/importanceRanking/", VariableLabels(end),"_Ensemble_ImpRank_T20"),'-dpng')
 
 % plot training/testing actual vs model estimation and 1 to 1
 figure(3)
@@ -119,4 +120,4 @@ ylabel(['True ' VariableLabels(end)], 'FontSize', 16)
 hold off
 
 % save plot to file
-print(strcat("codes/Postprocess/Plotters/Plots/ScatterPlots/", VariableLabels(end), "_Ensemble_Scatter"),'-dpng')
+print(strcat("codes/Postprocess/Plotters/Plots/scatterPlots/", VariableLabels(end), "_Ensemble_Scatter"),'-dpng')
