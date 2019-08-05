@@ -2,7 +2,7 @@
 
 The codes in this directory take a MATLAB table and produce a machine learning regression model with the corresponding output. The workspaces are saved to the **objects/Workspaces** folder. From there, models can be evaluated by using the codes in the **codes/Postprocess/Plotter** folder. 
 
-The code ensemble_Runner.m will run all codes in the directory. If possible, it is recoemmended that codes are run on a multi-core server. Here, the codes are written for 16 available cores. This can be changed by updating the input of the parpool() function.
+The code ensemble_Runner.m will run all codes in the directory. If possible, it is recoemmended that codes are run on a multi-core computer or server. The codes here are written for 16 available cores. This can be changed by updating the input of the parpool() function.
 
 ### Overview of Codes:
 
