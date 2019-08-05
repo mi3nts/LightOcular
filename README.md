@@ -27,7 +27,7 @@ The inputs and outputs of the five different machine learning regression models 
         **code**:   codes/Analysis/PDD_ensemble_MT.m
    5.  **Output**: Illuminance <br> **Inputs**:  Left pupil diameter, right pupil diameter, XYZ coordinates for gyroscope and accelerometer data in glasses <br> **code**:   codes/Analysis/ILM_ensemble_MT.m
         
-## Post-processing (visualization)
+## Post-processing
 
 Codes to plot data are given in folder **codes/Postprocess/Plotters**
 
