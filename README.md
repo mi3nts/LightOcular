@@ -1,6 +1,10 @@
 # LightOcular
 
-This repository contains codes and data for the in-review paper: Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning. The data consists of spectral and pupillometric data collected during 3 outdoor/indoor walks using the Konica Minolta CL-500A Illuminance Spectrophotometer and Tobii Pro Glasses 2. Please be advised, files are designed to work in the directory structure of the repository, please use caution when moving and hacking codes. Although codes are commented for clarity, the codes here were not particularly written for public use, and therefore may be not be optimal or user friendly. Please post any issues in the "Issues" section of this repo, or feel free to contact the author directly: Shawhin Talebi -  shawhin.talebi@utdallas.edu
+This repository contains codes and data for the in-review paper: Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning. The data consists of spectral and pupillometric data collected during 3 outdoor/indoor walks using the Konica Minolta CL-500A Illuminance Spectrophotometer and Tobii Pro Glasses 2. 
+
+Please be advised, files are designed to work in the directory structure of the repository, use caution when moving and hacking codes. Like many codes in scientific research, the codes posted here were created heuristically, and therefore may be suboptimal. Additionally, although most codes should run easily out of the box within the file structure, some require user intervention. Refer to the README files in the subsequent folders for more guidance.
+
+Please post any issues in the "Issues" section of this repo, or feel free to contact the author directly: Shawhin Talebi -  shawhin.talebi@utdallas.edu
 
 ## Pre-processing
 
