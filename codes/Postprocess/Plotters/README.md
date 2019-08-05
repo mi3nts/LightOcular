@@ -4,6 +4,8 @@ The codes in this folder can be used to evaluate the machine learning regression
 
 **Note**: codes 1 and 2, listed below, require manual entry of desired workspaces for specific plots e.g. the **ILM_Ensemble_MT.mat** must be replaced by **APD_Ensemble_MT.mat** to plot results for the average pupil diameter in code 1. 
 
+### Overview of codes
+
 1. **code**: ensemble_Plotter.m <br> **Description**: Plots and saves an error histogram, predictor importance ranking, and scatter plot for the APD, LPD, RPD, PDD, and ILM models based on the true and estimated values of each dependant variable.
 2. **code**: ensemble_oppMdl_Plotter.m <br> **Description**: Plots and saves an error histogram, predictor importance ranking, and scatter plot for the prediction of the LPD using the RPD model and vice-versa.
 3. **code**: ensemble_oppMdl_Setup.m <br> **Description**: Creates a workspace with the LPD model and the true RPD values. To get a workspace with the RPD model and the true values for the LPD, the order in which the workspaces are loaded must be switched manually.
