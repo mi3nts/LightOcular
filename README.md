@@ -4,7 +4,7 @@ This repository contains codes and data for the in-review paper: Modeling Autono
 
 ## Pre-processing
 
-An overview of the data preparation pipline is as follows:
+An overview of the data preparation process is as follows:
 
    1. Raw data is stored in the folder **raw**
    2. Data is read into Matlab using the codes located in the folder **codes/Preprocess/Read**
