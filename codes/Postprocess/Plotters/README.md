@@ -1,6 +1,6 @@
 ## Plotters
 
-The codes in this folder can be used to evaluate the machine learning regression models and visualize the data. An overview of the codes is given below. Plots are saved by type in the **codes/Postprocess/Plotters/Plots** folder.
+The codes in this folder can be used to evaluate the machine learning regression models and visualize the data. An overview of the codes is given below. Plots are saved by type in the **codes/Postprocess/Plotters/Plots** folder. **Note**: codes 1 and 2, listed below, require manual entry of desired workspaces for specific plots e.g. the **ILM_Ensemble_MT.mat** must be replaced by **APD_Ensemble_MT.mat** to plot results for the average pupil diameter in code 1. 
 
 1. **code**: ensemble_Plotter.m <br> **Description**: Plots and saves an error histogram, predictor importance ranking, and scatter plot for the APD, LPD, RPD, PDD, and ILM models based on the true and estimated values of each dependant variable.
 2. **code**: ensemble_oppMdl_Plotter.m <br> **Description**: Plots and saves an error histogram, predictor importance ranking, and scatter plot for the prediction of the LPD using the RPD model and vice-versa.
