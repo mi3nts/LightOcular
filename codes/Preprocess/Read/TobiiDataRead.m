@@ -8,7 +8,7 @@ clear;clc;close all
 
 % -------------------------------------------------------------------------
 % INSERT RUN NUMBER BELOW:
-Run = 'test';
+Run = '1';
 % -------------------------------------------------------------------------
 % change directory to proper parent
 str = pwd;
