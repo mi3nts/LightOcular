@@ -17,7 +17,7 @@ An overview of the data preparation pipline is as follows:
 The inputs and outputs of the five different machine learning regression models are given below. For all models 90% of data was used in training and 10% was used in testing. The fitrensemble function was used to train all the models.
 
    1.  **Output**: Average Pupil Diameter       
-        **Inputs**:  Spectrum from 360 -- 780 nm in 1 nm bins, XYZ coordinates for gyroscope and accelerometer data in glasses
+        **Inputs**:  Spectrum from 360 -- 780 nm in 1 nm bins, XYZ coordinates for gyroscope and accelerometer data in glasses <br>
         **code**:   codes/Analysis/APD_ensemble_MT.m
    2.  **Output**: Left Pupil Diameter <br> **Inputs**:  Spectrum from 360 -- 780 nm in 1 nm bins, XYZ coordinates for gyroscope and accelerometer data in glasses
         **code**:   codes/Analysis/LPD_ensemble_MT.m
