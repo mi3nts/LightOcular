@@ -19,7 +19,7 @@ An overview of the data preparation process is as follows:
 
 ## Analysis
 
-The inputs and outputs of the five different machine learning regression models are given below. For all models 90% of data was used in training and 10% was used in testing. The fitrensemble function was used to train all the models.
+The inputs, outputs, and codes for the five different machine learning regression models are given below. For all models, 90% of data was used in training and 10% was used in testing. The _fitrensemble_ function was used to train all the models.
 
    1.  **Output**: Average Pupil Diameter       
         **Inputs**:  Illuminance, Spectrum from 360 -- 780 nm in 1 nm bins, XYZ coordinates for gyroscope and accelerometer data in glasses <br>
