@@ -36,6 +36,22 @@ The inputs, outputs, and codes for the five different machine learning regressio
 
 Codes to plot data are given in folder **codes/Postprocess/Plotters**
 
+## How to cite
+
+If you find value in this work please use the following citation: 
+
+`Talebi S., et al. LightOcular. 2019. https://github.com/mi3nts/LightOcular`
+
+__Bibtex__:
+```
+@misc{LightOcular,
+authors={Shawhin Talebi & David J. Lary},
+title={LightOcular},
+howpublished={https://github.com/mi3nts/LightOcular}
+year={2019}
+}
+```
+
 ## Data store
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3354602.svg)](https://doi.org/10.5281/zenodo.3354602)
